@@ -195,13 +195,10 @@ class Calendar
 
     public static function setTimezone($timezone)
     {
-        if (is_null(self::$staticInstance)) {
-            self::$staticInstance = new Calendar;
-        }
+        $calendarInstance = self::getCalendarInstance();
+        $calendarInstance->timezone = new \DateTimeZone($timezone);
 
-        self::$staticInstance->timezone = new \DateTimeZone($timezone);
-
-        return self::$staticInstance;
+        return $calendarInstance;
     }
 
     /**
