@@ -1,7 +1,7 @@
 {
     "name": "matheus-rosa/calendar",
     "description": "A library to easily handle date operations",
-    "keywords": ["calendar", "date", "time", "recurrence"],
+    "keywords": ["calendar", "date", "time", "renewal"],
     "type": "library",
     "authors": [
         {
