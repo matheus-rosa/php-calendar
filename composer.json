@@ -1,0 +1,20 @@
+{
+    "name": "matheus-rosa/calendar",
+    "description": "A library to easily handle date operations",
+    "keywords": ["calendar", "date", "time", "recurrence"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Matheus Rosa",
+            "email": "matheus.alves.rosa@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Calendar\\": "src/"
+        }
+    }
+}
