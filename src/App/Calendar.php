@@ -94,20 +94,30 @@ class Calendar
         return $calendarInstance;
     }
 
+    /**
+     * @param $numberOfDays
+     * @return \DatePeriod
+     * @throws \Exception
+     */
     public function beforeDays($numberOfDays)
     {
-        $this->endDate->sub(new \DateInterval('P' . $numberOfDays . 'D'));
-        $this->endDate->setTime(0, 0, 0);
+        $this->endDate = clone $this->startDate;
+        $this->startDate->sub(new \DateInterval('P' . $numberOfDays . 'D'));
 
-        return $this->endDate;
+        return new \DatePeriod($this->startDate, new \DateInterval('P1D'), $this->endDate);
     }
 
+    /**
+     * @param $numberOfDays
+     * @return \DatePeriod
+     * @throws \Exception
+     */
     public function nextDays($numberOfDays)
     {
         $this->endDate->add(new \DateInterval('P' . $numberOfDays . 'D'));
         $this->endDate->setTime(0, 0, 0);
 
-        return $this->endDate;
+        return new \DatePeriod($this->startDate, new \DateInterval('P1D'), $this->endDate);
     }
 
     public function onlyMondays()
