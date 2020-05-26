@@ -4,6 +4,9 @@ A small lightweight library to handle with calendar operations.
 
 This library is an API to extend native PHP DateTime features.
 
+## Requirements
+PHP >= 5.*
+
 ## Usage
 
 ```php
