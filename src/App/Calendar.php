@@ -48,6 +48,25 @@ class Calendar
     }
 
     /**
+     * @return Calendar
+     * @throws \Exception
+     */
+    public static function now()
+    {
+        return self::interval(self::today());
+    }
+
+    /**
+     * @param $date
+     * @return Calendar
+     * @throws \Exception
+     */
+    public static function fromDate($date)
+    {
+        return self::interval($date);
+    }
+
+    /**
      * @param string|\DateTime $startDate
      * @param string|\DateTime $endDate
      * @return Calendar
@@ -190,7 +209,7 @@ class Calendar
             self::$staticInstance = new Calendar;
         }
 
-        return (self::getCalendarInstance())->timezone ?: new \DateTimeZone;
+        return (self::getCalendarInstance())->timezone ?: new \DateTimeZone(date_default_timezone_get());
     }
 
     public static function setTimezone($timezone)
