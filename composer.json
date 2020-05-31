@@ -1,5 +1,5 @@
 {
-    "name": "matheus-rosa/calendar",
+    "name": "matheus-rosa/php-calendar",
     "description": "A library to easily handle date operations",
     "keywords": ["calendar", "date", "time", "renewal"],
     "type": "library",
