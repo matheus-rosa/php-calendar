@@ -10,6 +10,8 @@ PHP >= 5.*
 ## Usage
 
 ```php
+use Calendar\App\Calendar;
+
 // Returns a DateTime instance.
 var_dump(Calendar::today());
 var_dump(Calendar::tomorrow());
